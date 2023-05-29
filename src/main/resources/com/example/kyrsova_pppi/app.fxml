@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #221f1f;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.kyrsova_pppi.CatalogController">
+    <children>
+        <AnchorPane layoutY="100.0" prefHeight="300.0" prefWidth="700.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <TableView fx:id="tableView" layoutX="246.0" layoutY="1.0" prefHeight="250.0" prefWidth="454.0">
+               <columns>
+                  <TableColumn fx:id="idColum" prefWidth="50.4000244140625" text="ID" />
+                  <TableColumn fx:id="nameColum" prefWidth="67.199951171875" text="Name" />
+                  <TableColumn fx:id="descColum" prefWidth="115.20001220703125" text="Desc" />
+                  <TableColumn fx:id="priceColum" prefWidth="77.60000610351562" text="Price" />
+                  <TableColumn fx:id="countColum" prefWidth="71.99996948242188" text="Count" />
+                  <TableColumn fx:id="locateColum" prefWidth="57.59991455078125" text="Locate" />
+               </columns>
+            </TableView>
+            <VBox layoutX="14.0" layoutY="5.0" prefHeight="289.0" prefWidth="222.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+                  <TextField fx:id="idInput" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                  <TextField fx:id="nameInput" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Desc" />
+                  <TextField fx:id="descInput" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Count" />
+                  <TextField fx:id="countInput" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Locate" />
+                  <TextField fx:id="locateInput" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                  <TextField fx:id="priceInput" />
+                  <Button fx:id="submitBtn" alignment="CENTER" mnemonicParsing="false" prefHeight="21.0" prefWidth="222.0" text="Submit" translateY="5.0" />
+               </children>
+            </VBox>
+            <Button fx:id="removeBtn" layoutX="403.0" layoutY="261.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="145.0" text="Remove" />
+         </children>
+        </AnchorPane>
+        <Label layoutX="38.0" layoutY="33.0" text="Склад товарів" textFill="WHITE">
+            <font>
+                <Font name="Times New Roman Bold" size="26.0" />
+            </font>
+        </Label>
+          <Label alignment="CENTER" layoutX="454.0" layoutY="30.0" prefHeight="34.0" prefWidth="231.0" text="Каталог товарів" textFill="WHITE">
+              <font>
+                  <Font name="Times New Roman Bold" size="29.0" />
+              </font>
+          </Label>
+    </children>
+</AnchorPane>
