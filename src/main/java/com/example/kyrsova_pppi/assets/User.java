@@ -1,6 +1,8 @@
 package com.example.kyrsova_pppi.assets;
 
 public class User {
+
+    private int id;
     private String firstName;
     private String secondName;
     private String userName;
@@ -9,6 +11,24 @@ public class User {
     private String gender;
 
     public User(String firstName, String secondName, String userName, String password, String location, String gender) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.userName = userName;
+        this.password = password;
+        this.location = location;
+        this.gender = gender;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public User(int id, String firstName, String secondName, String userName, String password, String location, String gender) {
+        this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
         this.userName = userName;

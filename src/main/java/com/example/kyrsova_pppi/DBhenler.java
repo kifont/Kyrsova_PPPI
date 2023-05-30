@@ -44,6 +44,33 @@ private static String url = "jdbc:mysql://localhost:3306/kyrsova";
         }
     }
 
+    public User getUserById(int id){
+        try (Connection connection = DBhenler.getDbConnection(); PreparedStatement statement = connection.prepareStatement("SELECT * FROM users WHERE idusers = ?")){
+            statement.setInt(1, id);
+            ResultSet rs = statement.executeQuery();
+            User user = new User();
+            if (rs.next()){
+                int idUser = rs.getInt(1);
+                String firstName = rs.getString(2);
+                String secondName = rs.getString(3);
+                String userName = rs.getString(4);
+                String password = rs.getString(5);
+                String location = rs.getString(6);
+                String gender = rs.getString(7);
+                user.setId(idUser);
+                user.setUserName(userName);
+                user.setFirstName(firstName);
+                user.setSecondName(secondName);
+                user.setPassword(password);
+                user.setLocation(location);
+                user.setGender(gender);
+            }
+            return user;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public ResultSet getUser(User user) {
         ResultSet resSet = null;
 
